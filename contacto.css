@@ -1,0 +1,98 @@
+/* GRID MULTISEDE */
+.grid-sedes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.card-sede {
+    background: #ffffff;
+    border: 2px solid #ffe3dc;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(255, 122, 89, 0.08);
+}
+
+.img-sede {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.info-sede {
+    padding: 1.2rem;
+}
+
+.info-sede h3 {
+    color: #ff6b4a;
+    margin-bottom: 0.5rem;
+}
+
+.info-sede p {
+    font-size: 0.95rem;
+    margin-bottom: 0.4rem;
+    color: #4a5568;
+}
+
+/* ESTILO SEDE ÚNICA */
+.card-unica {
+    background: #ffffff;
+    border: 2px solid #ffe3dc;
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(255, 122, 89, 0.08);
+}
+
+.unica-layout {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.unica-info {
+    flex: 1;
+    min-width: 260px;
+}
+
+.unica-info h3 {
+    color: #ff6b4a;
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.unica-info p {
+    font-size: 1.05rem;
+    margin-bottom: 0.5rem;
+    color: #4a5568;
+}
+
+.unica-img {
+    flex: 1;
+    min-width: 260px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* BOTÓN WHATSAPP */
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #25d366;
+    color: white !important;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 0.7rem 1.4rem;
+    border-radius: 20px;
+    margin-top: 0.8rem;
+    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.2);
+    transition: transform 0.2s;
+}
+
+.btn-whatsapp:hover {
+    transform: translateY(-2px);
+}
