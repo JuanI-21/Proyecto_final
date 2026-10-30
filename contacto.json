@@ -1,0 +1,17 @@
+{
+  "veterinariaId": "vet_arrayanes_01",
+  "nombreVeterinaria": "Veterinaria Arrayanes",
+  "tieneMultiplesSedes": false,
+  "sucursales": [
+    {
+      "idSede": 1,
+      "nombreSede": "Sede Central",
+      "direccion": "Av. España 1450, Mendoza",
+      "telefono": "+54 261 425-9999",
+      "whatsapp": "542614259999",
+      "horariosTexto": "Lunes a Sábados: 09:00 a 20:00 hs",
+      "imagen": "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=600&auto=format&fit=crop&q=60",
+      "mapaUrl": "https://maps.google.com/maps?q=Av.+Espana+1450,+Mendoza,+Argentina&t=&z=16&ie=UTF8&iwloc=&output=embed"
+    }
+  ]
+}
