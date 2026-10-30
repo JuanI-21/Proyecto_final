@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Innpet | Veterinaria</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="header.css">
+</head>
+<body>
+
+  <!-- Símbolo de huella reutilizable -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="huella" viewBox="0 0 64 64">
+      <ellipse cx="14" cy="26" rx="7" ry="9" transform="rotate(-18 14 26)"/>
+      <ellipse cx="27" cy="14" rx="7" ry="10" transform="rotate(-6 27 14)"/>
+      <ellipse cx="42" cy="14" rx="7" ry="10" transform="rotate(6 42 14)"/>
+      <ellipse cx="54" cy="26" rx="7" ry="9" transform="rotate(18 54 26)"/>
+      <path d="M32 29c-9 0-18 10-18 18 0 6 5 9 11 9 3 0 5-1 7-1s4 1 7 1c6 0 11-3 11-9 0-8-9-18-18-18z"/>
+    </symbol>
+  </svg>
+
+  <header class="header">
+    <nav class="nav" aria-label="Principal">
+
+      <a href="#" class="logo" aria-label="Innpet, inicio">
+        <span class="logo__icono"><svg><use href="#huella"/></svg></span>
+        <span class="logo__texto">inn<span>pet</span></span>
+      </a>
+
+      <input type="checkbox" id="menu-toggle" class="toggle" aria-label="Abrir menú">
+      <label for="menu-toggle" class="hamburguesa">
+        <span></span><span></span><span></span>
+      </label>
+
+      <ul class="menu">
+        <li><a href="#" aria-current="page">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#tienda">Tienda</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+
+      <a href="#turno" class="btn">Sacar turno</a>
+    </nav>
+  </header>
+
+</body>
+</html>

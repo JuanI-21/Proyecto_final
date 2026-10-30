@@ -1,0 +1,174 @@
+:root {
+  --naranja: #FF7A1A;
+  --naranja-oscuro: #E45F00;
+  --verde: #2E9E5B;
+  --verde-oscuro: #0F4D32;
+  --verde-lima: #C4EA7A;
+  --blanco: #FFFFFF;
+  --verde-suave: #EAF6EE;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Nunito', system-ui, sans-serif;
+  color: var(--verde-oscuro);
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* ---------- Header ---------- */
+.header {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 90% 0%, rgba(255, 122, 26, .4), transparent 45%),
+    linear-gradient(135deg, var(--verde-oscuro), var(--verde));
+  padding: 1.2rem 1.25rem 1.6rem;
+  border-bottom: 6px solid var(--naranja);
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: var(--verde-lima);
+  opacity: .15;
+  top: -130px;
+  left: 8%;
+}
+
+/* ---------- Navegación (píldora blanca) ---------- */
+.nav {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: .65rem .8rem .65rem 1.2rem;
+  background: var(--blanco);
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, .18);
+}
+
+/* Logo */
+.logo { display: flex; align-items: center; gap: .6rem; }
+
+.logo__icono {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--naranja);
+  display: grid;
+  place-items: center;
+  transition: transform .4s ease;
+}
+
+.logo:hover .logo__icono { transform: rotate(-14deg) scale(1.08); }
+
+.logo__icono svg { width: 26px; height: 26px; fill: var(--blanco); }
+
+.logo__texto {
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 700;
+  font-size: 1.7rem;
+  letter-spacing: -.5px;
+}
+
+.logo__texto span { color: var(--naranja); }
+
+/* Menú */
+.menu {
+  display: flex;
+  align-items: center;
+  gap: .25rem;
+  list-style: none;
+}
+
+.menu a {
+  display: block;
+  padding: .55rem 1rem;
+  border-radius: 999px;
+  font-weight: 700;
+  transition: background .2s, color .2s;
+}
+
+.menu a:hover { background: var(--verde-suave); color: var(--verde); }
+
+.menu a[aria-current="page"] { background: var(--verde); color: var(--blanco); }
+
+.menu a:focus-visible,
+.btn:focus-visible {
+  outline: 3px solid var(--verde-lima);
+  outline-offset: 3px;
+}
+
+/* Botón */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: .7rem 1.4rem;
+  border-radius: 999px;
+  background: var(--naranja);
+  color: var(--blanco);
+  box-shadow: 0 6px 0 var(--naranja-oscuro);
+  transition: transform .2s, box-shadow .2s;
+}
+
+.btn:hover  { transform: translateY(2px); box-shadow: 0 4px 0 var(--naranja-oscuro); }
+.btn:active { transform: translateY(6px); box-shadow: 0 0 0 var(--naranja-oscuro); }
+
+/* ---------- Menú móvil ---------- */
+.toggle,
+.hamburguesa { display: none; }
+
+@media (max-width: 920px) {
+  .hamburguesa {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: .7rem;
+    cursor: pointer;
+    order: 3;
+  }
+
+  .hamburguesa span {
+    width: 24px;
+    height: 3px;
+    border-radius: 3px;
+    background: var(--verde-oscuro);
+    transition: transform .25s, opacity .25s;
+  }
+
+  .nav { border-radius: 30px; flex-wrap: wrap; }
+  .nav > .btn { display: none; }
+
+  .menu {
+    display: none;
+    order: 4;
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    padding: .5rem 0 .8rem;
+  }
+
+  .menu a { text-align: center; }
+
+  .toggle:checked ~ .menu { display: flex; }
+  .toggle:checked ~ .hamburguesa span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+  .toggle:checked ~ .hamburguesa span:nth-child(2) { opacity: 0; }
+  .toggle:checked ~ .hamburguesa span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
