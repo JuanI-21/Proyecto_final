@@ -1,0 +1,533 @@
+
+/* ==========================
+   CONFIGURACIÓN GENERAL
+========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    background: #fffdf9;
+    overflow-x: hidden;
+}
+
+
+/* ==========================
+   HERO PRINCIPAL
+========================== */
+
+.hero {
+    position: relative;
+    min-height: 720px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    background: linear-gradient(
+        110deg,
+        #fffdf9 0%,
+        #fffaf3 48%,
+        #f7f5ed 100%
+    );
+}
+
+
+/* ==========================
+   CONTENIDO DE TEXTO
+========================== */
+
+.hero-content {
+    position: relative;
+    z-index: 5;
+
+    width: 50%;
+
+    padding-left: 6%;
+    padding-right: 2%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+/* ==========================
+   HUELLITAS SUPERIORES
+========================== */
+
+.hero-tag {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    background: #fff0e2;
+
+    padding: 12px 22px;
+    border-radius: 50px;
+
+    margin-bottom: 27px;
+}
+
+.paw-top {
+    font-size: 25px;
+    color: #f47716;
+}
+
+
+/* ==========================
+   TÍTULO
+========================== */
+
+.hero h1 {
+    position: relative;
+
+    font-size: clamp(48px, 5.4vw, 79px);
+    line-height: 1.03;
+
+    font-weight: 900;
+    letter-spacing: -3px;
+
+    color: #17463f;
+
+    max-width: 650px;
+}
+
+.orange-text {
+    display: block;
+    color: #f47716;
+}
+
+.heart {
+    display: inline-block;
+
+    color: #408d7b;
+    font-size: 0.85em;
+
+    transform: rotate(-12deg);
+    margin-left: 5px;
+}
+
+
+/* ==========================
+   DESCRIPCIÓN
+========================== */
+
+.hero-description {
+    max-width: 480px;
+
+    color: #38665f;
+
+    font-size: 20px;
+    line-height: 1.65;
+
+    margin-top: 30px;
+    margin-bottom: 38px;
+}
+
+
+/* ==========================
+   BOTONES
+========================== */
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+
+/* BOTÓN PRINCIPAL */
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    background: linear-gradient(
+        135deg,
+        #ff8b32,
+        #f16b0b
+    );
+
+    color: white;
+
+    padding: 18px 30px;
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    font-size: 17px;
+    font-weight: 900;
+
+    box-shadow: 0 9px 25px rgba(241, 107, 11, 0.22);
+
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 13px 30px rgba(241, 107, 11, 0.35);
+
+    background: #e9680b;
+}
+
+.calendar-icon {
+    font-size: 25px;
+}
+
+
+/* BOTÓN SECUNDARIO */
+
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    color: #24685c;
+
+    font-size: 16px;
+    font-weight: 900;
+
+    text-decoration: none;
+
+    border-bottom: 2px solid #e9a16d;
+
+    padding-bottom: 5px;
+
+    transition: 0.3s;
+}
+
+.btn-secondary span {
+    color: #f47716;
+    font-size: 24px;
+}
+
+.btn-secondary:hover {
+    color: #f47716;
+}
+
+
+/* ==========================
+   TEXTO INFERIOR
+========================== */
+
+.hero-trust {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: #78918a;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    margin-top: 42px;
+}
+
+.hero-trust span {
+    color: #f58228;
+    font-size: 22px;
+}
+
+
+/* ==========================
+   IMAGEN
+========================== */
+
+.hero-image {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: 59%;
+    height: 100%;
+
+    overflow: hidden;
+
+    z-index: 2;
+
+    border-radius: 35% 0 0 35% / 55% 0 0 55%;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    /* Permite mostrar mejor ambas mascotas */
+    object-position: 75% center;
+
+    display: block;
+
+    transition: transform 0.7s ease;
+}
+
+.hero-image:hover img {
+    transform: scale(1.025);
+}
+
+
+/* DEGRADADO DE LA IMAGEN */
+
+.image-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        rgba(255, 253, 249, 0.3),
+        transparent 30%
+    );
+
+    pointer-events: none;
+}
+
+
+/* ==========================
+   DECORACIONES SUPERIORES
+========================== */
+
+.decoration {
+    position: absolute;
+    pointer-events: none;
+    z-index: 1;
+}
+
+
+/* NARANJA SUPERIOR */
+
+.orange-top {
+    width: 220px;
+    height: 220px;
+
+    background: #ff9b48;
+
+    top: -175px;
+    left: -115px;
+
+    border-radius: 50%;
+}
+
+
+/* VERDE SUPERIOR */
+
+.green-top {
+    width: 130px;
+    height: 130px;
+
+    border: 8px solid #4a9381;
+
+    top: -85px;
+    right: 12%;
+
+    border-radius: 50%;
+}
+
+
+/* ==========================
+   LÍNEAS DECORATIVAS
+========================== */
+
+.small-lines {
+    position: absolute;
+
+    z-index: 4;
+
+    top: 23%;
+    left: 45%;
+
+    display: flex;
+    gap: 10px;
+
+    transform: rotate(30deg);
+}
+
+.small-lines span {
+    width: 10px;
+    height: 35px;
+
+    border-radius: 20px;
+
+    background: #ff9b48;
+}
+
+.small-lines span:nth-child(2) {
+    transform: translateY(-12px);
+}
+
+.small-lines span:nth-child(3) {
+    transform: translateY(5px);
+}
+
+
+/* ==========================
+   RESPONSIVE TABLETS
+========================== */
+
+@media (max-width: 1050px) {
+
+    .hero {
+        min-height: 650px;
+    }
+
+    .hero-content {
+        width: 53%;
+        padding-left: 5%;
+    }
+
+    .hero-image {
+        width: 55%;
+    }
+
+    .hero h1 {
+        font-size: 53px;
+    }
+
+    .hero-description {
+        font-size: 17px;
+    }
+
+    .hero-buttons {
+        gap: 20px;
+    }
+
+    .btn-primary {
+        padding: 15px 22px;
+        font-size: 15px;
+    }
+
+}
+
+
+/* ==========================
+   RESPONSIVE CELULARES
+========================== */
+
+@media (max-width: 700px) {
+
+    .hero {
+        min-height: auto;
+
+        display: flex;
+        flex-direction: column;
+
+        padding-top: 55px;
+    }
+
+    .hero-content {
+        width: 100%;
+
+        padding: 0 7%;
+
+        align-items: flex-start;
+    }
+
+    .hero-tag {
+        padding: 10px 16px;
+        gap: 8px;
+        margin-bottom: 22px;
+    }
+
+    .paw-top {
+        font-size: 22px;
+    }
+
+    .hero h1 {
+        font-size: clamp(42px, 10vw, 58px);
+        letter-spacing: -2px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+
+        margin-top: 22px;
+        margin-bottom: 28px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 22px;
+    }
+
+    .btn-primary {
+        padding: 16px 25px;
+    }
+
+    .hero-trust {
+        margin-top: 30px;
+        font-size: 12px;
+    }
+
+    .hero-image {
+        position: relative;
+
+        width: 100%;
+        height: 380px;
+
+        margin-top: 40px;
+
+        border-radius: 90px 90px 0 0;
+    }
+
+    .hero-image img {
+        object-position: 75% center;
+    }
+
+    .image-overlay {
+        background: linear-gradient(
+            180deg,
+            rgba(255, 253, 249, 0.1),
+            transparent 25%
+        );
+    }
+
+    .small-lines {
+        display: none;
+    }
+
+    .green-top {
+        width: 80px;
+        height: 80px;
+
+        right: 5%;
+    }
+
+}
+
+
+/* ==========================
+   CELULARES PEQUEÑOS
+========================== */
+
+@media (max-width: 380px) {
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .hero-image {
+        height: 300px;
+    }
+
+}
