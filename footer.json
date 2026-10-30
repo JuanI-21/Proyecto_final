@@ -1,0 +1,31 @@
+{
+  "marca": {
+    "nombre": "Innpets",
+    "slogan": "Somos la comunidad que cuida",
+    "direccion": "Mitre 535, Ciudad De Mendoza",
+    "telefono": "+54 9 2615940235"
+  },
+  "secciones": [
+    {
+      "titulo": "Información",
+      "links": [
+        { "texto": "Home", "url": "index.html" },
+        { "texto": "Soy Veterinario", "url": "#" },
+        { "texto": "Soy Prestador", "url": "servicios.html" }
+      ]
+    },
+    {
+      "titulo": "Legal",
+      "links": [
+        { "texto": "Bases Y Condiciones", "url": "#" },
+        { "texto": "Política De Privacidad", "url": "#" }
+      ]
+    }
+  ],
+  "redes": [
+    { "nombre": "TikTok", "url": "#", "tipo": "tiktok" },
+    { "nombre": "LinkedIn", "url": "https://linkedin.com", "tipo": "linkedin" },
+    { "nombre": "Instagram", "url": "https://instagram.com", "tipo": "instagram" }
+  ],
+  "copyright": "© 2026 Innpet – Todos Los Derechos Reservados."
+}
